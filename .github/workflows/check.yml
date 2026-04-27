@@ -1,4 +1,4 @@
-name: Run Site Check Script
+name: 核心服务可用检查
 
 on:
   schedule:
@@ -25,7 +25,7 @@ jobs:
           HOSTS: ${{ secrets.HOST }}
           PING_TOKEN: ${{ secrets.PING_TOKEN }}
           TRY_TIMES: ${{ secrets.TRY_TIMES }}
-          EMAIL_TO: ${{ secrets.EMAIL }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
           SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
