@@ -4,6 +4,7 @@ import time
 import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
+from email.utils import formataddr
 from datetime import datetime
 
 def send_email(subject, content):
@@ -17,7 +18,7 @@ def send_email(subject, content):
         return
 
     msg = MIMEText(content, 'plain', 'utf-8')
-    msg['From'] = "橙汁喵喵の服务监控"
+    msg['From'] = formataddr((Header("橙汁喵喵の服务监控", 'utf-8').encode(), smtp_user))
     msg['To'] = email_to
     msg['Subject'] = Header(subject, 'utf-8')
     
